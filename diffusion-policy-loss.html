@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Interpreting the Diffusion Policy Loss Function - Michael Zeng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <style>
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px 0;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    .back-button:hover {
+      background-color: #555;
+    }
+    
+    #markdown-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    #markdown-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    #markdown-content pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    
+    #markdown-content code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    
+    #markdown-content pre code {
+      background-color: transparent;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="markdown-content">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    
+    <div id="content"></div>
+  </div>
+
+  <script>
+    // Paste your markdown content between the backticks below
+    const markdownContent = `
+# Interpreting the Diffusion Policy Loss Function
+
+**Paste your markdown content here**
+
+This is where your markdown will go. You can use:
+
+- Lists
+- **Bold text**
+- *Italic text*
+- [Links](https://example.com)
+- Code blocks
+- Images
+- And more!
+
+## Example Section
+
+Your content here...
+    `;
+
+    // Parse and render the markdown
+    document.getElementById('content').innerHTML = marked.parse(markdownContent);
+  </script>
+</body>
+
+</html>
+
