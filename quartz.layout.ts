@@ -5,7 +5,8 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  // Breadcrumb at the very bottom of every content page
+  afterBody: [Component.ReturnHome()],
   footer: Component.Footer({
     links: {
       // Add your own links here if desired, or leave empty
@@ -15,9 +16,11 @@ export const sharedPageComponents: SharedLayout = {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
+  // Title followed by a breadcrumb link back to home
   beforeBody: [
-    Component.ArticleTitle(),  // Just the title
-    // Removed: Breadcrumbs, ContentMeta, TagList
+    Component.ArticleTitle(),
+    Component.ReturnHome(),
+    // Removed: ContentMeta, TagList
   ],
   left: [
     // Completely empty - no sidebar

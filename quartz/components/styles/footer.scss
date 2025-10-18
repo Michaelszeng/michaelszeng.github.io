@@ -1,6 +1,8 @@
 footer {
   text-align: left;
-  margin-bottom: 4rem;
+  font-size: 0.85rem; // make footer text smaller
+  margin-top: 2.5rem; // increase space above
+  margin-bottom: 1.75rem; // decrease space below
   opacity: 0.7;
 
   & ul {

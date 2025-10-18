@@ -3,7 +3,7 @@ title: Interpreting the Diffusion Policy Loss Function
 ---
 [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/pdf/2303.04137) ("Original Diffusion Policy Paper")
 
-> As shown in Ho et al. (2020), minimizing the loss function in Eq 3 also  minimizes the variational lower bound of the KL-divergence between the data distribution $p(x_0)$ and the distribution of samples drawn from the DDPM $q(x_0)$ using Eq 1.
+> "As shown in Ho et al. (2020), minimizing the loss function in Eq 3 also  minimizes the variational lower bound of the KL-divergence between the data distribution $p(x_0)$ and the distribution of samples drawn from the DDPM $q(x_0)$ using Eq 1."
 
 What does this mean...? I wanted to understand intuitively, so I derived this claim...
 
