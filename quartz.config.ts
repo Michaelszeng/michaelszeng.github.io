@@ -109,7 +109,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
+      // Plugin.Favicon(),
       Plugin.NotFoundPage(),
       Plugin.CustomOgImages(), // keep as you had it
     ],

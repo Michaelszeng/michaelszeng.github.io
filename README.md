@@ -1,5 +1,7 @@
 # Michael Zeng's Website
 
+Personal website integrating HTML with Obsidian-style Latex subpages.
+
 ## Build & Deploy
 
 After modifying markdown files in `content/`:
