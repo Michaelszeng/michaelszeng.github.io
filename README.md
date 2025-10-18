@@ -1,1 +1,34 @@
-This is the code for [Andy Zeng](https://andyzeng.github.io/)'s academic website. Notably, this uses [Isotope](https://isotope.metafizzy.co/) to create subpages, so you can get fancy with "sort by category" features if you want to. You can customize the `data-filter` and `data-category` fields, as well as Isotope parameters in the JS code at the bottom of `index.html`. Feel free to download this for your own personal use. Remember to delete the analytics tags at the top of `index.html` that you do not want on your own website. I'd appreciate a link back to my website. Inspired by [Jon's website](https://jonbarron.info/).
+# Michael Zeng's Website
+
+## Build & Deploy
+
+After modifying markdown files in `content/`:
+
+```bash
+# Build the site (generates HTML in public/)
+node quartz/bootstrap-cli.mjs build
+
+# If changes don't appear, clear cache and rebuild:
+rmdir /S /Q .quartz-cache 2>nul & node quartz/bootstrap-cli.mjs build
+
+# Preview: open public/diffusion-policy-loss.html in browser (Ctrl+Shift+R to hard refresh)
+# OR run dev server (better for development):
+node quartz/bootstrap-cli.mjs build --serve  # Visit http://localhost:8080
+
+# Deploy
+git add .
+git commit -m "Update content"
+git push
+```
+
+## Structure
+
+- `index.html` - Custom portfolio homepage
+- `content/` - Markdown source files (with LaTeX support)
+- `public/` - Generated HTML (linked from index.html)
+- `quartz.config.ts` - Site configuration
+- `quartz.layout.ts` - Page layout/components
+
+---
+
+*Template inspired by [Andy Zeng](https://andyzeng.github.io/) and [Jon Barron](https://jonbarron.info/)*
