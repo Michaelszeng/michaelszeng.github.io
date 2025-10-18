@@ -23,6 +23,9 @@
     <!-- Custom Style -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,21 +42,20 @@
         <div id="intro-text">
           <h1>Michael Zeng</h1>
           <p>
-            Hi! I'm currently a senior at MIT studying robotic manipulation with <a href="https://locomotion.csail.mit.edu/russt.html">Russ Tedrake</a>. I've spent a summer at Skydio, improving their MPC optimizer and training a GPT-based trajectory predictor to warm-start their MPC. I've also lead teams at MIT, building the electrical and software systems from scratch for our <a href="https://www.instagram.com/p/C9-S4neuI59/?igsh=a24zZGc1cGlueHUy">solar-powered 2-seater car Gemini</a>, and back at home, in my high school days, building <a href="https://www.youtube.com/watch?v=kBFS7SaGf_A">world-champion/world-record-holding robots for competition</a>. Nowadays, I am interested in studying generative models for dexterous robot manipulation and spend my time reading up and playing with all things modern robot learning.
+            Hi! I'm currently a senior at MIT studying robotic manipulation with <a href="https://locomotion.csail.mit.edu/russt.html">Russ Tedrake</a>. I've spent a summer at Skydio, improving their MPC optimizer and training a GPT-based trajectory predictor to warm-start it. I've also lead teams at MIT, building the electrical and software systems for our car <a href="https://www.instagram.com/p/C9-S4neuI59/?igsh=a24zZGc1cGlueHUy">Gemini</a>, and, in my high school days, building <a href="https://www.youtube.com/watch?v=kBFS7SaGf_A">world-champion robots for competition</a>. 
             <div id="more-bio" style="display: None">
               <br>
               <p></p>
             </div>
             <br>
+            Nowadays, I'm interested in studying generative models for dexterous robot manipulation and spend my time reading up on and playing with all things modern robot learning.
+            <br><br>
             <!-- <a href="javascript:toggle_bio()">Formal Bio</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <a href="https://www.linkedin.com/in/michael-zeng-a8b6751a6/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/Michaelszeng">Github</a>
+            <a href="https://www.linkedin.com/in/michael-zeng-a8b6751a6/"><i class="fab fa-linkedin"></i> LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/Michaelszeng"><i class="fab fa-github"></i> Github</a>
             <br><br>
             michzeng at mit dot edu
             <br><br>
-          </p>
-          <p>
-            Sometimes when I read, I write about it! I started this site to share some of my learnings.
           </p>
         </div>
         <div id="intro-image">
@@ -82,6 +84,18 @@
           <a href="https://tossingbot.cs.princeton.edu/"><video class="preview3" playsinline="" muted="" autoplay="" loop=""><source src="images/video-tossingbot-crop.mp4" type="video/mp4"></video></a>
         </div> -->
 
+        <div id="main-writing">
+          
+          <div class="list-item writing" data-category="writing" style="margin-top: -0.3em; padding-bottom: 1em;">
+            Sometimes when I read, I write about it! I started this site to share some of my learnings.
+          </div>
+
+          <div class="list-item writing" data-category="writing">
+            <p class="date">2025</p><a href="diffusion-policy-loss.html">Interpreting the Diffusion Policy Loss Function.</a>
+          </div>
+
+        </div>
+
         <!-- Truncated Set of Highlights (Shown by Default) -->
         <div id="main-highlights">
 
@@ -90,8 +104,6 @@
           </div>
 
         </div>
-
-
 
 
         <!-- Publications -->
@@ -1523,8 +1535,8 @@
       function update_isotope() {
         // Retrieve cached button click.
         var defaultFilterValue = localStorage.getItem('filterValue');
-        if (defaultFilterValue == null) {  // || defaultFilterValue === ".highlight"
-          defaultFilterValue = ".highlight"
+        if (defaultFilterValue == null) {
+          defaultFilterValue = ".writing"
         }
         $grid.isotope({ filter: defaultFilterValue });
         var buttons = document.getElementsByClassName("button");

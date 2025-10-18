@@ -54,7 +54,7 @@ table {
 }
 
 #main {
-  width: 54em;
+  width: 56em;
   margin: 0px auto;
   position: relative;
   min-height: 100vh;
@@ -99,15 +99,15 @@ h1 {
 
 #intro-image {
   margin: 3em 0 0 2em;
-  width: 12em;
-  height: 12em;
+  width: 15em;
+  height: 15em;
   float: left;
   overflow: hidden;
   border-radius: 1em;
 }
 
 #intro-image img {
-  width: 12em;
+  width: 15em;
 }
 
 /**************************************************/
@@ -304,4 +304,5 @@ h3 a:hover {
   position: absolute;
   bottom: 0;
   line-height: 2.5em;
+  padding-bottom: 2em;
 }
