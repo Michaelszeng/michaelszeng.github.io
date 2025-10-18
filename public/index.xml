@@ -6,17 +6,17 @@
       <description>Last 10 notes on Michael Zeng</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Interpreting the Diffusion Policy Loss Function</title>
+    <link>https://michaelszeng.github.io/diffusion-policy-loss</link>
+    <guid>https://michaelszeng.github.io/diffusion-policy-loss</guid>
+    <description><![CDATA[ Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (“Original Diffusion Policy Paper”) As shown in Ho et al.(2020), minimizing the loss function in Eq 3 also minimizes the variational lower bound of the KL-divergence between the data distribution p(x0) and the distribution of samples ... ]]></description>
+    <pubDate>Sat, 18 Oct 2025 07:44:10 GMT</pubDate>
+  </item><item>
     <title>Placeholder</title>
     <link>https://michaelszeng.github.io/</link>
     <guid>https://michaelszeng.github.io/</guid>
     <description><![CDATA[ Just here so Quartz is happy. ]]></description>
-    <pubDate>Sat, 18 Oct 2025 07:43:15 GMT</pubDate>
-  </item><item>
-    <title>diffusion-policy-loss</title>
-    <link>https://michaelszeng.github.io/diffusion-policy-loss</link>
-    <guid>https://michaelszeng.github.io/diffusion-policy-loss</guid>
-    <description><![CDATA[ Diffusion Policy Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (“Original Diffusion Policy Paper”) Formulation: represents timestep is the noise prediction network, learned params is observation at timestep is the DDPM noise added at each sampling step empirically set slightly sm... ]]></description>
-    <pubDate>Sat, 18 Oct 2025 07:40:32 GMT</pubDate>
+    <pubDate>Sat, 18 Oct 2025 07:44:10 GMT</pubDate>
   </item>
     </channel>
   </rss>

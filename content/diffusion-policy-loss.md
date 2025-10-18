@@ -1,7 +1,15 @@
-## Diffusion Policy
-[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion]([2303.04137](https://arxiv.org/pdf/2303.04137))
-("Original Diffusion Policy Paper")
-- Formulation: $x_t^{k-1} = \alpha(x_t^k - \gamma \epsilon_\theta(x_t^k, \text{obs}_t, k) + \mathcal{N}(0, \sigma^2 I))$
+---
+title: Interpreting the Diffusion Policy Loss Function
+---
+[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/pdf/2303.04137) ("Original Diffusion Policy Paper")
+
+> As shown in Ho et al.(2020), minimizing the loss function in Eq 3 also  minimizes the variational lower bound of the KL-divergence between the data distribution p(x0) and the distribution of samples drawn from the DDPM q(x0) using Eq 1.
+
+What does this mean...? I wanted to understand intuitively, so I derived this claim...
+
+[The actual diffusion policy paper might be helpful background]
+
+- Formulation: $x_t^{k-1} = \alpha(x_t^k - \gamma \epsilon_\theta(x_t^k, \text{obs}_t, k) + \mathcal{N}(0, \sigma^2 I))$ (Eq 1)
 	- ${}_t$ represents timestep
 	- $\epsilon_\theta$ is the noise prediction network, learned params $\theta$
 		- $\text{obs}_t$ is observation at timestep $t$
@@ -11,7 +19,7 @@
 	- Note: $k$ = denoising step
 
 - Training
-	- $\epsilon_\theta$ trained with loss: $\mathcal{L} = MSE(\epsilon^k, \epsilon_\theta(x_k + \epsilon^k, k))$
+	- $\epsilon_\theta$ trained with loss: $\mathcal{L} = MSE(\epsilon^k, \epsilon_\theta(x_k + \epsilon^k, k))$ (Eq 3)
 		- Mathematical Interpretation:
 			- $p_\theta(x_{0:K} | \text{obs}) = p_\theta(x_K | \text{obs}) \Pi_{k=1}^K p_\theta(x_{k-1} | x_k, \text{obs})$
 				- i.e. the denoising process is a Markov Chain; next state; $p(x_K | \text{obs})$ is a prior; each $x_{k-1}$ then is independent of all other $x_{i}$ given $x_k$ and $\text{obs}$.
