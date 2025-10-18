@@ -9,8 +9,8 @@
     <title>Interpreting the Diffusion Policy Loss Function</title>
     <link>https://michaelszeng.github.io/diffusion-policy-loss</link>
     <guid>https://michaelszeng.github.io/diffusion-policy-loss</guid>
-    <description><![CDATA[ Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (“Original Diffusion Policy Paper”) As shown in Ho et al.(2020), minimizing the loss function in Eq 3 also minimizes the variational lower bound of the KL-divergence between the data distribution p(x0) and the distribution of samples ... ]]></description>
-    <pubDate>Sat, 18 Oct 2025 07:44:10 GMT</pubDate>
+    <description><![CDATA[ Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (“Original Diffusion Policy Paper”) As shown in Ho et al. ]]></description>
+    <pubDate>Sat, 18 Oct 2025 08:01:46 GMT</pubDate>
   </item><item>
     <title>Placeholder</title>
     <link>https://michaelszeng.github.io/</link>

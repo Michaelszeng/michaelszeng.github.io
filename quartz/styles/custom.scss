@@ -1,3 +1,36 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// $pageWidth: 0px;          /* if you prefer the variable route */
+
+.page > #quartz-body {
+  /* force a single column grid */
+  grid-template-columns: auto !important;
+}
+
+/* ── Display-math ( $$ … $$ ) ──────────────────────────────────────────── */
+/* KaTeX ---------------------------------------------------------------- */
+.katex-display {           /* wrapper inserted by rehype-katex             */
+  display: block;          /* makes it a block so it breaks to a new line  */
+  text-align: center;      /* centres the whole formula                    */
+  margin: 1rem auto;       /* vertical space before / after                */
+}
+
+/* (The actual <span class="katex"> holding the SVG/HTML) */
+.katex-display > .katex {
+  display: inline-block;   /* keeps formula width only as wide as needed   */
+}
+
+/* remark-math + rehype-mathjax ----------------------------------------- */
+mjx-container.MathJax[display="true"] {   /* wrapper for MathJax display   */
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+/* Typst renderer ------------------------------------------------------- */
+.math.math-display {        /* class emitted by rehype-typst               */
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+}
