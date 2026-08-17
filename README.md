@@ -1,5 +1,7 @@
 # Michael Zeng's Website
 
+https://michaelszeng.github.io/
+
 Personal website integrating HTML with Obsidian-style Latex subpages.
 
 ## Build & Deploy
