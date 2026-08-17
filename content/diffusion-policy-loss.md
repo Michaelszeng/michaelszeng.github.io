@@ -105,9 +105,10 @@ What does this mean...? I wanted to understand intuitively, so I derived this cl
 					&= \arg\min_\theta \frac{1}{\alpha_k} \left\| \left( x_k - \frac{1 - \alpha_k}{\sqrt{1 - \bar{\alpha}_k}}\epsilon \right) - \left( x_k - \frac{1 - \alpha_k}{\sqrt{1 - \bar{\alpha}_k}}\epsilon_\theta(x_k, \text{obs}, k) \right) \right\|^2 \\
 					&= \arg\min_\theta \frac{1}{\alpha_k} \left\| -\frac{1 - \alpha_k}{\sqrt{1 - \bar{\alpha}_k}}\epsilon + \frac{1 - \alpha_k}{\sqrt{1 - \bar{\alpha}_k}}\epsilon_\theta(x_k, \text{obs}, k) \right\|^2 \\
 					&= \arg\min_\theta \frac{1}{\alpha_k} \left( \frac{1 - \alpha_k}{\sqrt{1 - \bar{\alpha}_k}} \right)^2 \left\| \epsilon_\theta(x_k, \text{obs}, k) - \epsilon \right\|^2 \\
-					&= \arg\min_\theta \left\| \epsilon_\theta(x_k, \text{obs}, k) - \epsilon \right\|^2
+					&\implies \arg\min_\theta \left\| \epsilon_\theta(x_k, \text{obs}, k) - \epsilon \right\|^2
 					\end{align*}
 					$$
+					- In the last step, we simply drop the constant coefficient, which the DDPM authors finds to empirically work better (and simplify the formulation)
 					- This is exactly the MSE loss proposed in the paper.
 	- Notes:
 		- This is a skewed way of looking at it, but: diffusion-policy training is kind like the EM algorithm with a trivial E-step. We already know the ground-truth $q(\cdot | x_0)$ used to generate the training data; so there is no need to optimize $q$ as we do in EM. Rather, we just perform the M-step of optimizing $\theta$.
